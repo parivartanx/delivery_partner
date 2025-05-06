@@ -1,6 +1,6 @@
 {
-    "name": "delivery_partner",
-    "short_name": "delivery_partner",
+    "name": "delivery_app",
+    "short_name": "delivery_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
