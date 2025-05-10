@@ -1,4 +1,4 @@
-import 'package:delivery_app/features/orders/pendingOrders/pending_order.dart';
+import 'package:delivery_app/features/orders/pendingOrders/pending_order_screen.dart';
 import 'package:delivery_app/features/orders/pickeduporders/screens/picked_up.dart';
 import 'package:flutter/material.dart';
 

@@ -248,40 +248,47 @@ class _CartListState extends State<CartList> {
                       ),
                       const SizedBox(height: 16),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          ElevatedButton(
-                            onPressed: () => _viewCart(cart),
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.blue,
-                              foregroundColor: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
+                          Expanded(
+                            child: ElevatedButton(
+                              onPressed: () => _viewCart(cart),
+                              style: ElevatedButton.styleFrom(
+                                // maximumSize: const Size(80, 300),
+                                backgroundColor: Colors.blue,
+                                foregroundColor: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
                               ),
+                              child: const Text('View'),
                             ),
-                            child: const Text('View'),
                           ),
-                          ElevatedButton(
-                            onPressed: () => _navigateToDelivery(cart),
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.blue,
-                              foregroundColor: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
+                          Expanded(
+                            child: ElevatedButton(
+                              onPressed: () => _navigateToDelivery(cart),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.blue,
+                                foregroundColor: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
                               ),
+                              child: const Text('Navigate'),
                             ),
-                            child: const Text('Navigate'),
                           ),
-                          ElevatedButton(
-                            onPressed: () => _updateStatus(cart),
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.blue,
-                              foregroundColor: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
+                          Expanded(
+                            child: ElevatedButton(
+                              onPressed: () => _updateStatus(cart),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.blue,
+                                foregroundColor: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
                               ),
+                              child: const Text('Update Status'),
                             ),
-                            child: const Text('Update Status'),
                           ),
                         ],
                       ),
