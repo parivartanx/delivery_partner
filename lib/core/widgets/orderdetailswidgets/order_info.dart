@@ -46,6 +46,7 @@ class OrderInfoCard extends StatelessWidget {
                     const Icon(Icons.navigation, color: Colors.white, size: 16),
                     const SizedBox(width: 4),
                     InkWell(
+                      onTap: (){},
                       child: Container(
                         width: 60,
                         height: 20,

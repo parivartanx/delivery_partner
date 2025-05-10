@@ -1,3 +1,5 @@
+import 'package:delivery_app/features/orders/deliveryhistory/screens/delivery_history_screen.dart';
+import 'package:delivery_app/features/profile/profile_setting.dart';
 import 'package:flutter/material.dart';
 
 class FourButtons extends StatelessWidget {
@@ -14,34 +16,73 @@ class FourButtons extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             _buildOrderButton(
-                Icons.inventory, "All Orders", screenWidth, screenHeight),
-            _buildOrderButton(Icons.money, "Earning",
-                screenWidth, screenHeight),
+              icon: Icons.inventory,
+              label: "All Orders",
+              screenWidth: screenWidth,
+              screenHeight: screenHeight,
+              onTap: () {},
+            ),
+            _buildOrderButton(
+              icon: Icons.money,
+              label: "Earning",
+              screenWidth: screenWidth,
+              screenHeight: screenHeight,
+              onTap: () {},
+            ),
           ],
         ),
-        const SizedBox(height: 10,) ,
+        const SizedBox(height: 10),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             _buildOrderButton(
-                Icons.history, "Delivery History", screenWidth, screenHeight),
-            _buildOrderButton(Icons.settings, "Setting",
-                screenWidth, screenHeight),
+              icon: Icons.history,
+              label: "Delivery History",
+              screenWidth: screenWidth,
+              screenHeight: screenHeight,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const DeliveryHistoryScreen(),
+                  ),
+                );
+              },
+            ),
+            _buildOrderButton(
+              icon: Icons.settings,
+              label: "Setting",
+              screenWidth: screenWidth,
+              screenHeight: screenHeight,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ProfileSettingsPage(),
+                  ),
+                );
+              },
+            ),
           ],
         ),
       ],
     );
   }
 
-  Widget _buildOrderButton(
-      IconData icon, String label, double screenWidth, double screenHeight) {
+  Widget _buildOrderButton({
+    required IconData icon,
+    required String label,
+    required double screenWidth,
+    required double screenHeight,
+    required VoidCallback onTap,
+  }) {
     final buttonWidth = screenWidth * 0.43;
     final buttonHeight = screenHeight * 0.15;
     final iconSize = screenWidth * 0.08;
     final fontSize = screenWidth * 0.04;
 
     return InkWell(
-      onTap: () {},
+      onTap: onTap,
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
       child: Container(
